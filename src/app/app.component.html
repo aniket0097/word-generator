@@ -1,0 +1,27 @@
+<div class="container w-50 mt-5 text-center">
+ <div class="text-center display-3 w-10 m-3 text-white ">
+WORD LIMIT = {{limit}}
+
+ </div>
+
+<input 
+type="range"
+min="1"
+max="50"
+value= {{limit}}
+class="slider form-control-range"
+  
+    (change)="slideHandle($event.target.value)"
+
+/>
+<button (click)="generate()" class="btn-btn-info  " >
+    GENEREATE WORDS
+</button>
+<div class="card card-body">
+<p class="display-4">
+{{ words }}
+</p>
+
+
+</div>
+</div>
